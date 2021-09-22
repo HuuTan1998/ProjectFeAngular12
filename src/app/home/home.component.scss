@@ -5,3 +5,11 @@
     padding: 10px;
     color: rebeccapurple;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.handleTestCorlor{
+    color:red !important;
+}
