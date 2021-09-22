@@ -1,13 +1,45 @@
 <div class="test">
     <h3>đây là component home</h3>
     <h4>Xin chao ban {{ name }}</h4>
+    <br />
+    <input type="number" [value]="age" [(ngModel)]="age" />
     <!-- <br/>
-    <input type="text" [value]="name" title="this is name" /> -->
-    <br/>
-    <input type="text" [value]="name" [(ngModel)]="name" />
-    <br/>
+    <input type="text" [value]="name" [(ngModel)]="name" /> -->
+    <br />
     <button class="btn btn-primary" (click)="resetName()">Reset</button>
 
     <!-- <h5 *ngIf="age >20" >Toi da qua gia</h5>
     <h5 *ngIf="age <=20" >To con tre</h5> -->
+    <!-- <div *ngIf="age <20 ; then tre; else gia"></div>
+    <ng-template #gia>
+        <h5>Toi da qua gia</h5>
+    </ng-template>
+    <ng-template #tre>
+        <h5>Toi van con tre</h5>
+    </ng-template> -->
+    <h3>List trai cay</h3>
+    <!-- <div *ngFor="let item of listFruit">
+        <li>{{item}}</li>
+    </div> -->
+    <table style="width:100%">
+        <tr>
+          <th>STT</th>
+          <th>Tên trái cây</th> 
+          <th>Số lượng</th>
+          <th>Giá bán</th>
+          <th>Hạ giá</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let item of listFruitObject ; let i = index">
+                <td>{{i}}</td>
+                <td>{{item.name | uppercase}}</td>
+                <td>{{item.quantity}}</td>
+                <td [ngClass]="{'handleTestCorlor':item.price < 0}">{{item.price}}</td>
+                <td><span>{{item.isCheck | onSale | uppercase}}</span></td>
+              </tr>
+        </tbody>
+       
+        
+      </table>
+
 </div>
