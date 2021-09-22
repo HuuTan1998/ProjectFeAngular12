@@ -1,0 +1,13 @@
+
+<label>Tỉnh/ Thành phố: </label>
+
+<select id="province" (change)="changeProvince($event)">
+    <option *ngFor="let province of dataAddress" [value]="province.idProvince">{{province.name}}</option>
+</select>
+
+<br/>
+<label>Quận/ Huyện: </label>
+
+<select id="district" >
+    <option *ngFor="let district of dataDistricts"  [value]="district.idDistrict">{{district.name}}</option>
+</select>
