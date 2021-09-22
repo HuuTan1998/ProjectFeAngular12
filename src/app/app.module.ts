@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OnSalePipe } from './on-sale.pipe';
 import { AddressComponent } from './address/address.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     OnSalePipe,
-    AddressComponent
+    AddressComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
