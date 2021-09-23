@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-address',
@@ -57,10 +58,13 @@ export class AddressComponent implements OnInit {
   ];
 
   public dataDistricts :any[] = [];
-  constructor() { }
+  constructor(private common:CommonService) { }
 
   ngOnInit(): void {
-    console.log(this.dataAddress)
+    //console.log(this.dataAddress)
+    this.count = this.common.count;
+    this.binhPhuong = this.common.binhPhuong(this.common.count);
+    this.common.count++;
   }
 
   public changeProvince(event : any){
@@ -72,5 +76,10 @@ export class AddressComponent implements OnInit {
   public changeColor (color:string): void{
     this.color = color;
   }
+
+  public count = 0;
+  public binhPhuong = 0
+
+
 
 }
