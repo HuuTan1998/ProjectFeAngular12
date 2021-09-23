@@ -1,5 +1,5 @@
 
-<label>Tỉnh/ Thành phố: </label>
+<!-- <label>Tỉnh/ Thành phố: </label>
 
 <select id="province" (change)="changeProvince($event)">
     <option *ngFor="let province of dataAddress" [value]="province.idProvince">{{province.name}}</option>
@@ -10,4 +10,15 @@
 
 <select id="district" >
     <option *ngFor="let district of dataDistricts"  [value]="district.idDistrict">{{district.name}}</option>
-</select>
+</select> -->
+<!-- <span [appHighlight]="nameColor">this is documented</span> -->
+
+<h1>My First Attribute Directive</h1>
+
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="changeColor('lightgreen')">Green
+  <input type="radio" name="colors" (click)="changeColor('yellow')">Yellow
+  <input type="radio" name="colors" (click)="changeColor('orange')">Cyan
+</div>
+<p [appHighlight]="color">Highlight me!</p>

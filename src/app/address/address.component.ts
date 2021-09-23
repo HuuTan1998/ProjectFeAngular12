@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./address.component.scss']
 })
 export class AddressComponent implements OnInit {
+
+  public nameColor = 'blue'
+  public color = '';
   public dataAddress = [
     {
       idProvince: '-1',
@@ -64,6 +67,10 @@ export class AddressComponent implements OnInit {
     this.dataDistricts = this.dataAddress.find(item => item.idProvince === event.target.value)?.province || [];
     //console.log(this.dataAddress.find(item => item.idProvince === event.target.value)?.province)
     //console.log(event.target.value)
+  }
+
+  public changeColor (color:string): void{
+    this.color = color;
   }
 
 }
