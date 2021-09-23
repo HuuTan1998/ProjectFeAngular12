@@ -12,4 +12,8 @@ export class CommonService {
   }
 
   constructor() { }
+
+  public sentData (data :any) :void {
+    console.log('data sent :', data)
+  }
 }

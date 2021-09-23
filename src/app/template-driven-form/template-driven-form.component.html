@@ -1,0 +1,9 @@
+<form>
+    <span>User name</span>
+    <input type="text" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}"/>
+    <br/>
+    <span>Age</span>
+    <input type="number" [(ngModel)]="age" [ngModelOptions]="{standalone: true}"/>
+    <br/>
+    <button (click)="submitData()">Submit</button>
+</form>
