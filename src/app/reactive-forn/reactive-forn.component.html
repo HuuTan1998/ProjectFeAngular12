@@ -1,0 +1,15 @@
+<form (ngSubmit)="submitData()"  [formGroup]="profileForm">
+    <label>User name</label>
+    <input type="text" formControlName="userName"/>
+    <div  *ngIf="!profileForm.controls.userName.valid" style="color:red">
+        <span>User name is required</span>
+    </div>
+    <br/>
+    <label>Age</label>
+    <input type="number" formControlName="age"/>
+    <div  *ngIf="!profileForm.controls.age.valid" style="color:red">
+        <span>Age is required</span>
+    </div>
+    <br/>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
