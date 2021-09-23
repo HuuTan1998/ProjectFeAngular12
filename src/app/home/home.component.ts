@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public name = 'Huu Tan'
-
+  public userName = 'user'
+  //public userName = 'admin'
   public age = 18
 
   public listFruit = ['cam','xoai','man','nho']

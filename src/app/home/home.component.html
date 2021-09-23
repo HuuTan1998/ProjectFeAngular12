@@ -1,4 +1,19 @@
 <div class="test">
+    <h2>Check login</h2>
+    <ul [ngSwitch]="userName">
+        <li *ngSwitchCase="'user'">
+            <span>User login</span>
+        </li>
+        <li *ngSwitchCase="'admin'">
+            <span>Admin login</span>
+            <app-address></app-address>
+        </li>
+        <li *ngSwitchDefault>
+            <span>Chưa được login</span>
+        </li>
+    </ul>
+
+
     <h3>đây là component home</h3>
     <h4>Xin chao ban {{ name }}</h4>
     <br />
